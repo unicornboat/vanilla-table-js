@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Demo of Vanilla Table JavaScript</title>
+	<link rel="stylesheet" href="../src/vanilla-table-js-1.0.0.css">
+<!--	<link rel="stylesheet" href="../src/themes/vanilla-table-js-dark-theme.css">-->
+	<script src="data.js"></script>
+	<script src="../src/vanilla-table-js-1.0.0.js"></script>
+	<style>
+		html, body {
+			font-family: Helvetica, Tahoma, Arial, sans-serif;
+			font-size: 12px;
+			font-weight: normal;
+			-webkit-font-smoothing: subpixel-antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			height: 100%;
+			margin: 0;
+			width: 100%;
+		}
+
+		body {
+			box-sizing: border-box;
+			padding: 10px;
+		}
+
+		main {
+			box-shadow: 0 1px 5px 1px #00000020;
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+<main></main>
+</body>
+</html>
+<script>
+window.onload = function () {
+	console.log(data[0]);
+	var dt = new VanillaTableJs('main', data, {
+		debug: true,
+		search_input_placeholder: 'Search any...',
+		title: 'Employees',
+		fixed_columns: ['id', 'name']
+	});
+};
+</script>
